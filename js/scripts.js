@@ -1,4 +1,4 @@
-alert('Hello world');
-
-let favoriteFood = 'Tacos al pastor';
-document.write(favoriteFood);
+let pokemonList = [
+  {name: 'Venusaur', height: 2, types: ['grass' , 'poison']},
+  
+]
