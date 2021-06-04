@@ -8,7 +8,7 @@ for (let i=0; i < pokemonList.length; i++) {
   //Writes Pokemon name to the DOM
   document.write(pokemonList[i].name + " (height :" + pokemonList[i].height + ")");
 //Checks if pokemon height is greater than 1.5 m
-  if (pokemonList[i].height > 1.5) {
+  if (pokemonList[i].height > 1.6) {
     //if pokemon height is greater than 1.5 m, writes "Wow that's big!"
     document.write(" - Wow, that's big!");
   }
