@@ -17,3 +17,23 @@ body {
    height:auto;
    margin-bottom: 25px;
  }
+
+.button-class {
+  margin: 0 0 20px 0;
+  padding: 20px;
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  color:black;
+  display: inline-block;
+  list-style-type: none;
+  width:100%;
+  text-align: left;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
