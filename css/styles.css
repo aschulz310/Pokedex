@@ -15,30 +15,128 @@ body {
  .logo {
    width: 200px;
    height:auto;
-   margin-bottom: 25px;
+   margin: 25px;
+   text-align: center;
  }
 
-.button-class {
-  margin: 0 0 20px 0;
-  padding: 20px;
-  border: none;
-  font-size: 16px;
-  background-color: white;
-  color:black;
-  display: inline-block;
-  list-style-type: none;
-  width:100%;
-  text-align: left;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
+ #logo-container {
+   text-align: center;
+ }
 
-.button-class:hover {
-  background-color:orange;
-  color:white;
-}
+ .container {
+     display: grid;
+ }
 
-li {
-  list-style-type: none;
-}
+ ul {
+     border: 3px solid black;
+     padding: 10px;
+     list-style-type: none;
+     width: 100%;
+ }
+
+ li {
+     padding-bottom: 10px;
+ }
+
+ .pokemon-button {
+     font-size: 16px;
+     display: block;
+     width: 100%;
+     padding: 20px;
+     background-color: white;
+     color:black;
+     border-color: black;
+     cursor: pointer;
+     transition-property: background-color;
+     transition-duration: 0.2s;
+ }
+
+ .pokemon-button:active {
+     background-color: orange;
+     font-size: 15px;
+ }
+
+ .pokemon-button:hover {
+     background-color: orange;
+     border: 3px solid black;
+ }
+
+ /* Select Pokemon Modal */
+
+ #modal-container {
+   position: fixed;
+   padding: 20px;
+   box-sizing: border-box;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+   z-index: 999;
+   overflow: auto;
+   display: grid;
+   text-align: center;
+ }
+
+ .modal {
+   margin-top: 20%;
+   display: inline-block;
+   box-sizing: border-box;
+   background: #fff;
+   padding: 15px;
+   width: 100%;
+   max-width: 300px;
+   max-height: 400px;
+   text-align: center;
+   font-size: 15px;
+ }
+
+ .modal-close {
+   float: right;
+   -webkit-appearance: none;
+   border: 0;
+   background: none;
+   color: #777;
+   text-decoration: underline;
+   cursor: pointer;
+   padding: 0px 0px 20px 150px;
+ }
+
+ .modal h1 {
+   margin-top: 0;
+   color:black;
+ }
+
+ .modal p {
+   margin-bottom: 0;
+   color:black;
+ }
+
+ #modal-container {
+     display: none;
+ }
+
+ #modal-container.is-visible {
+     display: block;
+ }
+
+ .Pokeheight, .Poketype, .Pokename {
+     text-align: center;
+ }
+
+ .Pokeheight, .Poketype {
+     font-size: 20px;
+ }
+
+ .Pokename {
+     font-size: 30px;
+ }
+
+ .img-container {
+     display: flex;
+     justify-content: center;
+ }
+
+ .PokeImage {
+     width: 60%;
+ }
