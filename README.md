@@ -1,18 +1,18 @@
-#Pokedex project
+# Pokedex project
 
 To build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
 
-##Features and Requirements User Goals
+## Features and Requirements User Goals
 
 The users should be able to view a list of data and see more details for a given data item on demand.
 
-##Key Features
+## Key Features
 
 * Load data from an external source (API)
 * View a list of items
 * On user action (e.g., by clicking on a list item), view details for that item
 
-##Technical Requirements
+## Technical Requirements
 
 **Required:**
 * The app must load data from an external API.
