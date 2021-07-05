@@ -140,7 +140,7 @@ let pokemonRepository = (function () {
     modalBody.append(weightElement);
     modalBody.append(typesDiv);
 
-    $("#pokemonModal").modal("toggle");
+    //$("#pokemonModal").modal("toggle");
   }
 
   //add event listener to search bar
