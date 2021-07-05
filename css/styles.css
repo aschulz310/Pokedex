@@ -1,141 +1,265 @@
+* {
+	box-sizing: border-box;
+}
 
 body {
-   background-color: black;
-   color:white;
-   font-family: 'Lato', sans-serif;
-   font-weight: 700;
-   font-size: 16px;
-   /* Sets the font size to 16px */
-   line-height: 1.8;
-   /* Sets the line-height to 1.6 */
-   padding: 50px;
+	height: 100%;
+	background-color: black;
+	color: #2b2b2b;
+	font-family: 'lato', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.6;
+	position: relative;
+	min-height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
 
- }
+.center {
+	text-align: center;
+}
 
- .logo {
-   width: 200px;
-   height:auto;
-   margin: 25px;
-   text-align: center;
- }
+.logo {
+  width: 300px;
+  text-align: center;
+  padding: 50px;
+}
 
- #logo-container {
-   text-align: center;
- }
+a {
+	color: #0068db;
+}
 
- .container {
-     display: grid;
- }
+ul {
+	 list-style-type: none;
+	 padding: 0;
+	 margin: 0;
+}
 
- ul {
-     padding: 10px;
-     list-style-type: none;
-     width: 100%;
- }
+h1 {
+	font-size: 30px;
+	font-weight: 700;
+	font-family: 'lato', sans-serif;
+	line-height: normal;
+	color: #9F40A0;
+	}
 
- li {
-     padding-bottom: 10px;
- }
+h2 {
+	font-size: 26px;
+	font-weight: 400;
+	font-family: 'lato', sans-serif;
+	line-height: normal;
+	color: #d66c00;
+}
 
- .pokemon-button {
-     font-size: 16px;
-     display: block;
-     width: 100%;
-     padding: 20px;
-     background-color: white;
-     color:black;
-     border-color: black;
-     cursor: pointer;
-     transition-property: background-color;
-     transition-duration: 0.2s;
- }
+p {
+	font-size: 16px;
+	font-weight: 300;
+	font-family: 'lato', sans-serif;
+	line-height: 1.0;
+}
 
- .pokemon-button:active {
-     background-color: orange;
-     font-size: 15px;
- }
+.strong {
+	font-weight: 400;
+	color: #357b70;
+	font-size: 105%;
+	padding: 0px 1.5px;
+}
 
- .pokemon-button:hover {
-     background-color: orange;
-     border: 3px solid black;
- }
+/* layout search pokemon */
+.form-control {
+background-color: #4caf50; /* Green */
+border: none;
+color: white;
+padding: 16px 16px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 14px 2px;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+cursor: pointer;
+background-color: white;
+color: black;
+border: 2px solid #d66c00;
+width: 230px;
+height: 30px;
+}
 
- /* Select Pokemon Modal */
+.hidden {
+	display: none;
+}
 
- #modal-container {
-   position: fixed;
-   padding: 20px;
-   box-sizing: border-box;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background: rgba(0, 0, 0, 0.5);
-   z-index: 999;
-   overflow: auto;
-   display: grid;
-   text-align: center;
- }
 
- .modal {
-   margin-top: 20%;
-   display: inline-block;
-   box-sizing: border-box;
-   background: #fff;
-   padding: 15px;
-   width: 100%;
-   max-width: 300px;
-   max-height: 400px;
-   text-align: center;
-   font-size: 15px;
- }
+/* layout button */
+.button-class {
+	background-color: #4caf50; /* Green */
+	border: none;
+	color: white;
+	padding: 16px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 5px 2px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	border: 2px solid #4caf50;
+	width: 230px;
+	height: 50px;
+}
+	.padding {
+	padding-bottom: 20px;
+}
 
- .modal-close {
-   float: right;
-   -webkit-appearance: none;
-   border: 0;
-   background: none;
-   color: #777;
-   text-decoration: underline;
-   cursor: pointer;
-   padding: 0px 0px 20px 150px;
- }
+/* Layout Modal container */
+#modal-container {
+	display: none;
+}
 
- .modal h1 {
-   margin-top: 0;
-   color:black;
- }
+#modal-container.is-visible {
+	position: fixed;
+	padding: 0;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
 
- .modal p {
-   margin-bottom: 0;
-   color:black;
- }
+	/* to show it above other content */
+	z-index: 999;
 
- #modal-container {
-     display: none;
- }
+	/* to allow scrolling if the screen is not high enough*/
+	overflow: auto;
 
- #modal-container.is-visible {
-     display: block;
- }
+	/* this is used to center the modal */
+	display: grid;
+	text-align: center;
+}
 
- .Pokeheight, .Poketype, .Pokename {
-     text-align: center;
- }
+.modal-body {
+	margin: auto;
+	box-sizing: border-box;
+	background: #fff;
+	padding: 0;
+	width: 100%;
+	max-width: 500px;
+	text-align: center;
+	min-height: 400px;
+}
 
- .Pokeheight, .Poketype {
-     font-size: 20px;
- }
+.modal-close {
+	float: right;
+	-webkit-appearance: none;
+	border: 0;
+	background: none;
+	color: #777;
+	text-decoration: underline;
+}
 
- .Pokename {
-     font-size: 30px;
- }
+.modal h1 {
+	margin: 20px 0 0 20px;
+	text-align: left;
 
- .img-container {
-     display: flex;
-     justify-content: center;
- }
+}
 
- .PokeImage {
-     width: 60%;
- }
+.modal p {
+	margin-bottom: 20px;
+}
+
+.modal img {
+	height: 200px;
+}
+
+.modal span {
+	padding: 20px;
+}
+
+/* Type Background Colors */
+
+.type {
+	padding: 0;
+	margin:0 auto;
+	text-align: center;
+	float: left;
+	max-width: 35%;
+	border-radius: 10px;
+}
+
+.type p{
+	margin: 10px;
+}
+
+.fire {
+	background-color:#f19100;
+}
+.water {
+	background-color:#0060f1;
+	color:#fff;
+}
+.grass {
+	background-color:#07861c;
+	color:#fff;
+}
+.bug {
+	background-color:#043f0e;
+	color:#fff;
+}
+.poison {
+	background-color:#7c0a80;
+	color:#fff;
+}
+.ghost {
+	background-color:#3a062d;
+	color:#fff;
+}
+.rock {
+	background-color:#444038;
+	color:#fff;
+}
+.ground {
+	background-color:#633d1e;
+	color:#fff;
+}
+.flying {
+	background-color:#65c5cc;
+}
+.dragon {
+	background-color:#198f6c;
+	color:#fff;
+}
+.electric {
+	background-color:#dbdf21;
+}
+.normal {
+	background-color:#99a18e;
+}
+.fairy {
+	background-color:#dd3b9f;
+	color:#fff;
+}
+.fighting {
+	background-color:#6e3f00;
+	color:#fff;
+}
+.psychic {
+	background-color:#db6db1;
+	color:#fff;
+}
+.ice {
+	background-color:#179edd;
+	color:#fff;
+}
+.steel {
+	background-color:#a7a7a7;
+}
+.dark {
+	background-color:#131313;
+	color:#fff;
+}
